@@ -1,8 +1,7 @@
-
-LABEL authors="yasmanirosado"
-
 # Etapa 1: Compilación
 FROM eclipse-temurin:21-jdk AS build
+
+LABEL authors="yasmanirosado"
 
 WORKDIR /app
 
@@ -13,7 +12,7 @@ RUN chmod +x mvnw
 
 COPY src/ src/
 
-RUN ./mvnw -DskipTests package
+RUN ./mvnw -B -DskipTests package
 
 # Etapa 2: Ejecución
 FROM eclipse-temurin:21-jre
