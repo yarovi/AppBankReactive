@@ -1,0 +1,6 @@
+spring:
+  mongodb:
+    uri: ${DB_ATLAS_APP_BANK_URI}
+
+server:
+  port: ${PORT:8080}

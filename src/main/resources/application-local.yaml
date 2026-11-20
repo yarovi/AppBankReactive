@@ -1,0 +1,4 @@
+spring:
+  data:
+    mongodb:
+      uri: ${DB_ATLAS_APP_BANK_URI}

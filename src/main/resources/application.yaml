@@ -3,15 +3,14 @@ spring:
     active: dev
   application:
     name: bank-transfer-api
-  data:
-    mongodb:
-      uri: mongodb://localhost:27017/bank_transfers
-      connect-timeout: 5000
-      socket-timeout: 5000
-      server-selection-timeout: 5000
+  mongodb:
+    uri: ${DB_ATLAS_APP_BANK_URI}
+    connect-timeout: 5000
+    socket-timeout: 5000
+    server-selection-timeout: 5000
 
 server:
-  port: 8080
+  port: ${PORT:8080}
   reactive:
     session:
       timeout: 30m
